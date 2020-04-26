@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 a,ins{text-decoration:none}
 article,aside,canvas,details,figcaption,figure,footer,header,hgroup,hr,menu,nav,section,summary{display:block}
 a,hr{border:0;padding:0}
@@ -22,6 +23,7 @@ body *{
 .App{
   background:#eeeeee;
   padding-bottom: 40px;
+  overflow: hidden;
 }
 .App-header{
   width:100%;
@@ -34,6 +36,43 @@ body *{
   position:fixed;
   top:0;
   z-index: 999;
+}
+.App-footer{
+  width:100%;
+  height: 80px;
+  border-top:1px solid #999999;
+  background:#ffffff;
+  color:#999999;
+  line-height: 100px;
+  display:flex;
+  justify-content: space-between;
+  position:fixed;
+  bottom: -1px;
+  z-index: 999;
+}
+.addlist{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -30px;
+  left: 330px;
+  background: #ffffff;
+  border: 2px solid #999999;
+  border-radius: 50%;
+  font-size: 60px;
+  padding-top: 17px;
+}
+.App-nav{
+  display:flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  padding-top: 17px;
+}
+.nav-icon{
+  width:50px;
+  height: 50px;
+  font-size: 48px;
 }
 .classification{
   padding-top: 145px;
@@ -64,10 +103,12 @@ body *{
 .App-header h3{
   font-size:30px;
   margin-left: 20px;
+  color: #fff;
 }
 .App-header h4{
   font-size:24px;
   margin-right: 20px;
+  color: #fff;
 }
 .list {
   width:660px;
@@ -76,8 +117,19 @@ body *{
   margin:40px auto;
   padding: 20px;
 }
+.list .ant-input-group-wrapper{
+  margin-top:30px;
+}
+.list .ant-select-selection__rendered{
+  line-height:42px;
+}
+.ant-select-dropdown-menu-item{
+ font-size:26px !important; 
+ line-height: 35px !important;
+}
 .question{
-  font-size:34px;
+  font-size: 32px;
+  line-height: 47px;
   margin: 20px 0 0 20px;
 }
 .question span{
@@ -89,12 +141,22 @@ body *{
   color:green;
   margin:20px 0 0 20px;
 }
+.answer_p{
+  font-size: 32px;
+  line-height: 47px;
+  margin: 20px 0 0 20px;
+}
+.answer_p span{
+  font-size:34px;
+  color:green;
+}
 .answer_list{
   margin:20px 0 0 20px;
 }
 .answer_list li{
-  font-size:30px;
+  font-size:28px;
   line-height:45px;
+  color: #555555;
 }
 .explain_title{
   font-size:28px;
@@ -139,7 +201,7 @@ body *{
   color: #ffffff;
 }
 .alertshow{
-  width:156px;
+  width:250px;
   background: rgba(000,000,000,.8);
   color: #ffffff;
   line-height: 40px;
@@ -147,7 +209,7 @@ body *{
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-left: -83px;
+  margin-left: -130px;
   text-align: center;
   padding: 10px 20px;
 }
@@ -167,4 +229,112 @@ body *{
 .grading{
   font-size: 40px;
   color: red;
+}
+.errrep{
+  width:100%;
+  background: #ffffff;
+  padding:60px 20px;
+  margin-bottom: 80px;
+}
+.list_surface{
+  padding:110px 0;
+}
+.errrep .errrep_title{
+  font-size: 34px;
+  color:#000000; 
+  line-height:40px;
+  margin-left: 20px;
+  width:670px;
+  display:flex;
+  justify-content:space-between;
+}
+.errrep .errrep_title span{
+  font-size:30px;
+}
+.errrep .errrep_title .errrep_sure{
+  color:green;
+}
+.errrep .errrep_title .errrep_num{
+  color:red;
+}
+.err_list{
+  padding-bottom: 20px;
+  width: 710px;
+  border-bottom: 1px solid #999999;
+}
+.err_relevant{
+  font-size: 24px;
+  color: #999999;
+  margin: 20px 0 0 20px;
+}
+.introduce{
+  color: #999999;
+}
+.login{
+  padding: 110px 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login input{
+  width:450px;
+  height: 70px;
+  margin:0 auto;
+  margin-top: 20px;
+  font-size: 28px;
+  border-radius:10px;
+}
+.login input:nth-of-type(1){
+  margin-top: 80px;
+}
+.login input::-webkit-input-placeholder {
+  font-size: 28px;
+}
+.bread{
+  margin-top:150px !important;
+}
+.login_btn{
+  width: 450px;
+  height: 70px !important;
+  line-height: 70px !important;
+  margin-top: 30px;
+  border-radius: 10px !important;
+}
+.answer_title{
+  padding-top:110px;
+}
+.addtopic{
+  padding:110px 30px;
+}
+.addtopic input{
+  height: 60px;
+  margin-top: 30px;
+  font-size: 28px;
+  border-radius: 10px;
+}
+.addtopic textarea{
+  margin-top: 30px;
+  font-size: 28px;
+  border-radius: 10px;
+}
+.addquestion,.addanswer,.addlink{
+  font-size: 28px;
+  margin:30px 0 0 0;
+}
+.addanswer_icon{
+  width: 40px;
+  display: block !important;
+  height: 40px;
+  font-size: 40px;
+  margin: 20px auto;
+  color: #999999 !important;
+}
+.ant-select-selection--single{
+  height: 44px !important;
+}
+.ant-select-arrow{
+  margin-top:-13px !important;
 }
