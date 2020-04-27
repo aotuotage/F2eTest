@@ -332,9 +332,25 @@ body *{
   margin: 20px auto;
   color: #999999 !important;
 }
+.addanswer_icon_big{
+  width: 80px;
+  display: block !important;
+  height: 80px;
+  font-size: 80px;
+  margin: 30px auto;
+  color: #999999 !important;
+}
 .ant-select-selection--single{
   height: 44px !important;
 }
 .ant-select-arrow{
   margin-top:-13px !important;
+}
+.listanswer_title{
+  margin-top:50px;
+}
+.surebtn{
+  height: 65px !important;
+  display:block !important;
+  margin:0 auto;
 }

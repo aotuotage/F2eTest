@@ -35,6 +35,7 @@ export default class TestList extends Component{
             url: `https://www.xinwanju.cn/fetest?active=${id}`,
             headers:{"Content-Type":"application/x-www-form-urlencoded"},
             }).then(function (response) {
+                console.log(response)
                 let newdata = response.data.map(function (item){
                     return {...item,state:false,openshow:false}
                 })
@@ -71,7 +72,7 @@ export default class TestList extends Component{
             alerttext:'',
             alertshow:false
         })
-        },1000)
+        },2000)
     }
     //选择答案
     choice(e,i){
